@@ -27,4 +27,12 @@ A thread lies only in one of the shown states at any instant:
     4. Waiting => wait for other thread on condition.
 4. Time Waiting : Thread lies in timed waiting state when it calls a method with a time out parameter. A thread lies in this state until the timeout is completed or until a notification is received.
 5. Terminated : A thread is in terminated or dead state when its run() method exits.
-![Screenshot](screenshot.png)
+
+# Thread Creation
+* Extending thread class
+* Implementing Runnable Interface
+    * Thread Class vs Runnable Interface
+        1. Extend Thread class than no other class can be extended as no multiple inheritence supported
+        2. But possible with implementing Runnable
+        3. Thread has more method including yield() , Runnable has sibgle abstract method run()
+        
