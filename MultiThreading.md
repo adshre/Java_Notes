@@ -28,6 +28,8 @@ A thread lies only in one of the shown states at any instant:
 4. Time Waiting : Thread lies in timed waiting state when it calls a method with a time out parameter. A thread lies in this state until the timeout is completed or until a notification is received.
 5. Terminated : A thread is in terminated or dead state when its run() method exits.
 
+*Note : The purpose of start() is to create a separate call stack for the thread. A separate call stack is created by it, and then run() is called by JVM.
+
 # Thread Creation
 * Extending thread class
 * Implementing Runnable Interface
@@ -44,3 +46,9 @@ Inter-thread communication is a mechanism in which a thread is paused running in
 * wait() : It tells the calling thread to give up the lock and go to sleep until some other thread enters the same monitor and calls notify().
 * notify() : It wakes up one single thread that called wait() on the same object. It should be noted that calling notify() does not actually give up a lock on a resource.
 * notifyAll() : It wakes up all the threads that called wait() on the same object
+
+# Thread Priority
+
+Every thread in Java has a priority that helps the thread scheduler to determine the order in which threads scheduled. The threads with higher priority will usually run before and more frequently than lower priority threads. By default, all the threads had the same priority, i.e., they regarded as being equally distinguished by the scheduler, when a thread created it inherits its priority from the thread that created it.\
+Default priority of a thread is 5 (NORM_PRIORITY). The value of MIN_PRIORITY is 1 and the value of MAX_PRIORITY is 10.
+
