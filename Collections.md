@@ -22,3 +22,13 @@ A framework is a set of classes and interfaces which provide a ready-made archit
     1. Unordered(sorted) collection of elements
     2. No duplicates allowed
     3. Implemented by HashSet, LinkedHashSet
+# ArrayList
+1. Implements List Interface
+2. Provides us with dynamic arrays in Java
+3. ArrayList cannot be usedfor primitive types like int, char, etc. Needs Objects
+4. Is not Synchronized by default.
+5. Internally implemented :
+    1. Creates a bigger sized memory on heap memory (for example memory of double size).
+    2. Copies the current memory elements to the new memory.
+    3. New item is added now as there is bigger memory available now.
+    4. Delete the old memory.
