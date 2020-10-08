@@ -35,4 +35,12 @@ A thread lies only in one of the shown states at any instant:
         1. Extend Thread class than no other class can be extended as no multiple inheritence supported
         2. But possible with implementing Runnable
         3. Thread has more method including yield() , Runnable has sibgle abstract method run()
-        
+ 
+# Interthread Communication
+
+Polling : Testing a condition repeatedly until it becomes true, wasting CPU cycle\
+Multi Threading tackels this problem.\
+Inter-thread communication is a mechanism in which a thread is paused running in its critical section and another thread is allowed to enter (or lock) in the same critical section to be executed. It is implemented by following methods of Object class:
+* wait() : It tells the calling thread to give up the lock and go to sleep until some other thread enters the same monitor and calls notify().
+* notify() : It wakes up one single thread that called wait() on the same object. It should be noted that calling notify() does not actually give up a lock on a resource.
+* notifyAll() : It wakes up all the threads that called wait() on the same object
