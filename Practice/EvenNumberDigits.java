@@ -49,3 +49,21 @@ class EvenNumberDigits{
         
     }
 }
+
+
+/*
+Time Complexity: O(N * logD) — Iteration over the array is O(N) where n in size of array, and for each number, we are calculating the number of digits in it. Since we are looping over each digit, it adds to time complexity too. There are almost log D digits in a number D. So, The array iteration + iteration over each adds up to O(N * log D) time complexity.
+Space Complexity: O(1) — Since there’s no auxiliary space involved in the above algorithm, the space complexity becomes O(1).
+*/
+
+
+/*
+public int findNumbers(int[] nums) {
+    int count = 0;
+    for (int num : nums) {
+      count += String.valueOf(num).length() % 2 == 0 ? 1 : 0;
+    }
+    return count;
+  }
+
+*/
